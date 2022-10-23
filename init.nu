@@ -16,7 +16,7 @@ export def-env bm [
 		| default $'($env.NU_PACKER_HOME)/directory_bookmarks.nuon'
 	)
 	let marks = (if ($file | path exists) { open $file } else { {} })
-	let-env NU_BOOKMARKS = ($marks | transpose k v | get k)
+	let-env NU_BOOKMARKS = ($marks | transpose k v | get -i k | default [])
 	let-env PWD = (
 		if $list {
 			print $marks
