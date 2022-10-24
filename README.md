@@ -1,6 +1,6 @@
 # Bookmarks
 
-Bookark directories and jump to them.
+Bookmark directories and jump to them.
 
 A port of [OhMyBash][]'s [Bashmarks][] plugin for [packer.nu][].
 

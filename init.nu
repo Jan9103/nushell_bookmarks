@@ -1,6 +1,6 @@
 # Directory Bookmark
 def 'complete name' [] {
-	$env | get -i NU_BOOKMARKS | default []
+	$env.NU_BOOKMARKS | default []
 }
 
 export def-env bm [
