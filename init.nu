@@ -17,7 +17,7 @@ export def-env bm [
 	)
 	let marks = (if ($file | path exists) { open $file } else { {} })
 	let-env NU_BOOKMARKS = ($marks | transpose k v | get -i k | default [])
-	let-env PWD = (
+	cd (
 		if $list {
 			print $marks
 			$env.PWD

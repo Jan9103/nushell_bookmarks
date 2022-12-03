@@ -1,5 +1,5 @@
 {
-	version: [1 0 1]
+	version: [1 0 2]
 	description: 'Directory bookmarks'
 	copyright: '2022 Jan9103 (@jan9103:matrix.org)'
 	license: 'MIT'
