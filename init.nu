@@ -23,10 +23,10 @@ export def-env bm [
 			$env.PWD
 		} else if $name != null {
 			if $add {
-				$marks | upsert $name $env.PWD | save $file
+				$marks | upsert $name $env.PWD | save -f $file
 				$env.PWD
 			} else if $delete {
-				$marks | reject $name | save $file
+				$marks | reject $name | save -f $file
 				$env.PWD
 			} else if $print {
 				print ($marks | get -i $name)
