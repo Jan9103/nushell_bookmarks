@@ -12,11 +12,11 @@ export def-env bm [
 ] {
 	let file = (
 		$env.NU_PACKER_CFG
-		| get -i bookmarks.file
+		| get bookmarks?.file?
 		| default $'($env.NU_PACKER_HOME)/directory_bookmarks.nuon'
 	)
 	let marks = (if ($file | path exists) { open $file } else { {} })
-	let-env NU_BOOKMARKS = ($marks | transpose k v | get -i k | default [])
+	let-env NU_BOOKMARKS = ($marks | transpose k v | get k? | default [])
 	cd (
 		if $list {
 			print $marks
@@ -29,7 +29,7 @@ export def-env bm [
 				$marks | reject $name | save -f $file
 				$env.PWD
 			} else if $print {
-				print ($marks | get -i $name)
+				print ($marks | try {get $name} catch {null})
 				$env.PWD
 			} else {
 				if $name in $marks {$marks | get $name

@@ -4,9 +4,8 @@
 	copyright: '2022 Jan9103 (@jan9103:matrix.org)'
 	license: 'MIT'
 	url: 'https://github.com/jan9103/nushell_bookmarks'
-	min_nu_version: [0 73 0]
 	max_nu_version: [0 77 0]
-	min_packer_version: [0 3 0]
-	max_packer_version: [0 4 0]
+	min_packer_version: [0 5 0]
+	max_packer_version: [0 5 0]
 }
 # vim: ft=nu
