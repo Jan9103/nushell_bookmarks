@@ -3,7 +3,7 @@ def 'complete name' [] {
 	$env.NU_BOOKMARKS | default []
 }
 
-export def-env bm [
+export def --env bm [
 	--add(-a)     # add the PWD as bookmark
 	--delete(-d)  # delete the bookmark
 	--list(-l)    # list bookmarks
